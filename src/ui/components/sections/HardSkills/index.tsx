@@ -7,7 +7,7 @@ import { Container, Title, Wrapper } from './styles';
 
 function HardSkills() {
   return (
-    <Container id="skills">
+    <Container>
       <motion.div
         whileInView={{ marginTop: '0rem' }}
         transition={{ duration: 0.75 }}

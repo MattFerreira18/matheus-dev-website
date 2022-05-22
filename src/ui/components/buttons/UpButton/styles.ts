@@ -4,7 +4,7 @@ export const Container = styled('button', {
   position: 'fixed',
   bottom: 0,
   right: 0,
-  zIndex: '100',
+  zIndex: '$4',
 
   marginRight: '2rem',
   marginBottom: '2rem',

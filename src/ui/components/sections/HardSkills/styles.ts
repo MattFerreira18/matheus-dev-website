@@ -10,7 +10,7 @@ export const Container = styled('section', {
 
   background: '$black900',
 
-  zIndex: '-8',
+  // zIndex: '-8',
 
   '@tablet': {
     maxWidth: '1200px',

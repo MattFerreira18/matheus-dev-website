@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 import useMouse from '../../../../app/hooks/useMouse';
 import { Container } from './styles';
@@ -10,32 +10,34 @@ type SocialLinkProps = {
   nickname: string;
 };
 
-function SocialLink({ name, link, nickname, icon }: SocialLinkProps) {
+function SocialLink({ icon, link, name, nickname }: SocialLinkProps) {
   const { changeCursorModel } = useMouse();
+  const [isHovering, setIsHovering] = useState(false);
+
+  function onMouseEnter() {
+    changeCursorModel('hovered');
+    setIsHovering(true);
+  }
+
+  function onMouseLeave() {
+    changeCursorModel();
+    setIsHovering(false);
+  }
 
   return (
-    <a href={link} target="_blank" rel="noreferrer">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-        viewport={{ once: true }}
-      >
-        <motion.div transition={{ duration: 0.25 }} whileHover={{ scale: 1.1 }}>
-          <Container
-            aria-label={name}
-            onMouseEnter={() => changeCursorModel('hovered')}
-            onMouseLeave={() => changeCursorModel()}
-          >
-            {icon}
-            <span>{name}</span>
-            <span className={nickname.length > 26 ? 'reduced' : ''}>
-              {nickname}
-            </span>
-          </Container>
-        </motion.div>
-      </motion.div>
-    </a>
+    <Container
+      aria-label={name}
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      {icon}
+      <h3 style={{ fontSize: isHovering && nickname.length > 20 && '12px' }}>
+        {isHovering ? nickname : name}
+      </h3>
+    </Container>
   );
 }
 

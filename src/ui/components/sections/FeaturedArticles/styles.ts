@@ -8,7 +8,7 @@ export const Container = styled('section', {
   marginTop: '2rem',
   paddingY: '2rem',
 
-  zIndex: '-5',
+  // zIndex: '-5',
 
   background: '$black900',
 

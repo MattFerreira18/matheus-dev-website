@@ -11,11 +11,11 @@ export const Container = styled('section', {
   gridTemplateColumns: 'repeat(2, 1fr)',
   alignItems: 'center',
 
-  '@mobile': {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column-reverse',
-  },
+  // '@mobile': {
+  //   display: 'flex',
+  //   justifyContent: 'center',
+  //   flexDirection: 'column-reverse',
+  // },
 });
 
 export const TextWrapper = styled('div', {
@@ -24,15 +24,15 @@ export const TextWrapper = styled('div', {
 
   justifySelf: 'initial',
 
-  '@mobile': {
-    width: '100%',
+  // '@mobile': {
+  //   width: '100%',
 
-    margin: '0',
-    marginTop: '4rem',
-    padding: '0 2rem',
+  //   margin: '0',
+  //   marginTop: '4rem',
+  //   padding: '0 2rem',
 
-    textAlign: 'center',
-  },
+  //   textAlign: 'center',
+  // },
 
   '.hand-image': {
     width: '1.6rem',
@@ -42,32 +42,32 @@ export const TextWrapper = styled('div', {
     fontSize: '1.2rem',
     color: '$gray100',
 
-    '@mobile': {
-      fontSize: '$large',
-    },
-    '@min-mobile': {
-      fontSize: '$medium',
-    },
+    // '@mobile': {
+    //   fontSize: '$large',
+    // },
+    // '@min-mobile': {
+    //   fontSize: '$medium',
+    // },
   },
   h1: {
     fontSize: '3.2rem',
 
-    '@mobile': {
-      fontSize: '2.8rem',
-    },
-    '@min-mobile': {
-      fontSize: '2.2rem',
-    },
+    // '@mobile': {
+    //   fontSize: '2.8rem',
+    // },
+    // '@min-mobile': {
+    //   fontSize: '2.2rem',
+    // },
   },
   'h1 + span': {
     fontSize: '1.4rem',
 
-    '@mobile': {
-      fontSize: '$large',
-    },
-    '@min-mobile': {
-      fontSize: '$medium',
-    },
+    // '@mobile': {
+    //   fontSize: '$large',
+    // },
+    // '@min-mobile': {
+    //   fontSize: '$medium',
+    // },
   },
 });
 

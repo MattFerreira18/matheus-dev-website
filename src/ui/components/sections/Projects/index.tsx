@@ -6,7 +6,7 @@ import { Container, Title, Wrapper } from './styles';
 
 function Projects() {
   return (
-    <Container id="projects">
+    <Container>
       <motion.div
         whileInView={{ marginTop: '0rem' }}
         transition={{ duration: 0.75 }}

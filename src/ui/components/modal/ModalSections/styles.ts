@@ -43,7 +43,7 @@ export const Modal = styled('div', {
 
   position: 'fixed',
   inset: 0,
-  zIndex: '9999',
+  zIndex: '$3',
 });
 
 export const Wrapper = styled('div', {

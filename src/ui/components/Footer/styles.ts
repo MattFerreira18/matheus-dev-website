@@ -8,7 +8,7 @@ export const Container = styled('footer', {
   padding: '$4',
 
   borderTop: '1px solid $gray400',
-  background: '$black900',
+  background: '$gray500',
 
   position: 'fixed',
   right: 0,

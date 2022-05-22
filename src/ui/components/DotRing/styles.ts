@@ -4,7 +4,7 @@ export const Ring = styled('div', {
   position: 'fixed',
   top: 0,
   left: 0,
-  zIndex: '9999',
+  zIndex: '$4',
 
   size: '22px',
 
@@ -33,7 +33,7 @@ export const Dot = styled('div', {
   position: 'fixed',
   top: '50%',
   left: '50%',
-  zIndex: '9999',
+  zIndex: '$4',
 
   size: '8px',
 
