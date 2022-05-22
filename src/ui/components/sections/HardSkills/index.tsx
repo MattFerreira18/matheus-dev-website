@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import { createElement } from 'react';
 
 import mySkills from '../../../../app/data/mySkills';
-import HardSkill from './HardSkill';
-import { Container, Title, Wrapper } from './styles';
+import HardSkill from '../../../pages/Skills/HardSkill';
+import { Container, Title, Wrapper } from '../../../pages/Skills/styles';
 
 function HardSkills() {
   return (

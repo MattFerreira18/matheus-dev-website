@@ -6,13 +6,15 @@ const translatePopover = keyframes({
 });
 
 export const Container = styled('div', {
-  minWidth: '14rem',
-  minHeight: '14rem',
-
-  marginY: '1rem',
+  minWidth: '$56',
+  minHeight: '$56',
 
   position: 'relative',
   justifySelf: 'center',
+
+  '&:not(:first-child)': {
+    marginTop: '$4',
+  },
 
   '@mobile': {
     width: '100%',
@@ -32,39 +34,38 @@ export const Wrapper = styled('div', {
     animation: `${translatePopover} 300ms`,
   },
 
-  '@mobile': {
-    bottom: 'calc(100% - 120px)',
-  },
+  // '@mobile': {
+  //   bottom: 'calc(100% - 120px)',
+  // },
 });
 
 export const ArrowDown = styled('div', {
   size: 0,
 
-  marginLeft: '6rem',
+  marginLeft: '$24',
   marginTop: '0.4rem',
 
   borderX: '10px solid transparent',
-  borderTop: '10px solid $black800',
+  borderTop: '10px solid $gray400',
 
-  '@mobile': {
-    marginTop: '0',
-    marginLeft: '46%',
-  },
+  // '@mobile': {
+  //   marginTop: '0',
+  //   marginLeft: '46%',
+  // },
 });
 
 export const Content = styled('div', {
   width: '14rem',
   height: '10rem',
 
-  borderRadius: '0.5rem',
-  background: '$black800',
+  borderRadius: '$md',
+  background: '$gray400',
 
-  padding: '1rem',
+  padding: '$4',
 
   letterSpacing: '0.4px',
   lineHeight: '1.4',
-  fontFamily: '$body',
-  fontSize: '0.825rem',
+  fontSize: '$sm',
 
   transform: 'scale(1.1)',
 

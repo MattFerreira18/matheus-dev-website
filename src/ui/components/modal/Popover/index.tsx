@@ -30,8 +30,8 @@ function Popover({ title, description, children }: PopoverProps) {
       </Wrapper>
       {Children.map(children, (child) =>
         cloneElement(child, {
-          onMouseEnter: () => onMouseEnter(),
-          onMouseLeave: () => onMouseLeave(),
+          onMouseEnter,
+          onMouseLeave,
         }),
       )}
     </Container>

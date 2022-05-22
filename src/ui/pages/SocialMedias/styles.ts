@@ -12,6 +12,8 @@ export const Container = styled('section', {
 });
 
 export const Wrapper = styled('div', {
+  marginY: '$4',
+
   '& > div': {
     width: '1200px',
 
