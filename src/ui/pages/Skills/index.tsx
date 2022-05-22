@@ -10,7 +10,7 @@ function SkillsPage() {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 2.5 }}
+        transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
         <Title>Habilidades</Title>
@@ -19,7 +19,7 @@ function SkillsPage() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 2.5 }}
+          transition={{ duration: 2 }}
           viewport={{ once: true }}
         >
           {mySkills.hardSkills.map(({ name, description, icon }) => (
