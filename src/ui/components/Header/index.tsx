@@ -1,6 +1,3 @@
-/**
- * TODO: improve of how is changed the active prop present in `NavItem`
- */
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 

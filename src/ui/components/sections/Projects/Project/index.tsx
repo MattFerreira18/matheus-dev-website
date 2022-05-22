@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import {
-  IoLogoGithub,
+  SiGithub,
   SiTypescript,
   SiReact,
   SiNextdotjs,
@@ -74,7 +74,7 @@ function Project({ name, overview, repository, technologies }: ProjectProps) {
                 onMouseEnter={() => changeCursorModel('hovered')}
                 onMouseLeave={() => changeCursorModel()}
               >
-                <IoLogoGithub />
+                <SiGithub />
               </GitLink>
             </a>
           </IconsWrapper>
