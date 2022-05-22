@@ -28,42 +28,42 @@ export const Container = styled('footer', {
   },
 });
 
-export const InfoWrapper = styled('div', {
-  height: '100%',
+export const Disclaimer = styled('div', {
+  height: '$8',
+
+  marginBottom: '4px',
 
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+
+  color: '$gray300',
 
   svg: {
     marginX: '0.4rem',
   },
-
-  strong: {
-    marginLeft: '0.4rem',
-  },
 });
 
-export const IconsWrapper = styled('div', {
-  height: '100%',
+export const SocialNetworks = styled('div', {
+  height: '$8',
+
+  fontSize: '$lg',
 
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
 
-  fontSize: '1.5rem',
-
   '& a': {
-    color: '$gray100',
+    color: '$gray300',
     transition: '250ms',
   },
 
   '& a:not(:first-child)': {
-    marginLeft: '1rem',
+    marginLeft: '$4',
   },
 
   '& a:hover': {
-    color: '$gray50',
+    color: '$gray100',
   },
 
   '@mobile': {

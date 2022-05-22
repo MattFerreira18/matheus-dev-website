@@ -2,7 +2,7 @@ import styled from '../../styles';
 
 export const Container = styled('section', {
   maxWidth: '1200px',
-  minHeight: '60vh',
+  height: 'calc($96 * 2)',
 
   marginX: 'auto',
   marginY: '$8',
@@ -76,6 +76,8 @@ export const TextWrapper = styled('div', {
 export const Profile = styled('div', {
   maxWidth: '400px',
   maxHeight: '400px',
+
+  marginBottom: '$16',
 
   justifySelf: 'center',
 

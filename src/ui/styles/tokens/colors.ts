@@ -1,5 +1,4 @@
 export default {
-  // newelest colors(v3)
   gray100: '#F0E6F3',
   gray200: '#E1CFE8',
   gray300: '#B29DBC',

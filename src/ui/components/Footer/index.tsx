@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import socialNetworks from '../../../app/data/socialNetworks';
 import Icon from '../Icon';
 import SocialNetworkLink from '../SocialNetworkLink';
-import { Container, IconsWrapper, InfoWrapper } from './styles';
+import { Container, SocialNetworks, Disclaimer } from './styles';
 
 function Footer() {
   return (
@@ -14,14 +14,14 @@ function Footer() {
         style={{ marginTop: '2rem' }}
         viewport={{ once: true }}
       >
-        <InfoWrapper>
+        <Disclaimer>
           <span>feito com</span>
           <Icon as="AiFillHeart" />{' '}
           <span>
             por <strong>Matheus Ferreira</strong>
           </span>
-        </InfoWrapper>
-        <IconsWrapper>
+        </Disclaimer>
+        <SocialNetworks>
           {socialNetworks.map((socialNetwork) => (
             <SocialNetworkLink
               key={socialNetwork.link}
@@ -34,7 +34,7 @@ function Footer() {
             link="https://github.com/MattFerreira18/matheus-dev-website"
             icon={<Icon as="SiCodesandbox" />}
           />
-        </IconsWrapper>
+        </SocialNetworks>
       </motion.div>
     </Container>
   );
