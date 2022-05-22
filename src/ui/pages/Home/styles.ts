@@ -1,4 +1,4 @@
-import styled from '../../../styles';
+import styled from '../../styles';
 
 export const Container = styled('section', {
   maxWidth: '1200px',

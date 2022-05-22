@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
-import { createElement } from 'react';
 
 import socialNetworks from '../../../app/data/socialNetworks';
-import { SocialButton } from '../buttons';
 import Icon from '../Icon';
+import SocialNetworkLink from '../SocialNetworkLink';
 import { Container, IconsWrapper, InfoWrapper } from './styles';
 
 function Footer() {
@@ -24,16 +23,16 @@ function Footer() {
         </InfoWrapper>
         <IconsWrapper>
           {socialNetworks.map((socialNetwork) => (
-            <SocialButton
+            <SocialNetworkLink
               key={socialNetwork.link}
               link={socialNetwork.link}
               aria-label={socialNetwork.name}
-              icon={createElement(socialNetwork.icon)}
+              icon={socialNetwork.icon}
             />
           ))}
-          <SocialButton
+          <SocialNetworkLink
             link="https://github.com/MattFerreira18/matheus-dev-website"
-            icon={<Icon as="BsCodeSlash" />}
+            icon={<Icon as="SiCodesandbox" />}
           />
         </IconsWrapper>
       </motion.div>

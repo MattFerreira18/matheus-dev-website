@@ -1,29 +1,9 @@
 import { GetStaticProps } from 'next';
 
-import {
-  // About,
-  // HardSkills,
-  // SocialLinks,
-  // FeaturedArticles,
-  Presentation,
-  // Projects,
-  // BooksRead,
-} from '../ui/components/sections';
+import HomePage from '../ui/pages/Home';
 
-const IS_ARTICLES_SECTION_ENABLED = false;
-
-export default function Home() {
-  return (
-    <>
-      <Presentation />
-      {/* <About /> */}
-      {/* <SocialLinks /> */}
-      {/* <HardSkills /> */}
-      {/* <Projects /> */}
-      {/* {IS_ARTICLES_SECTION_ENABLED && <FeaturedArticles />} */}
-      {/* <BooksRead /> */}
-    </>
-  );
+function Home() {
+  return <HomePage />;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -32,3 +12,5 @@ export const getStaticProps: GetStaticProps = async () => {
     revalidate: 60 * 60 * 48, // 48 hours
   };
 };
+
+export default Home;

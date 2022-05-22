@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-import myPresentation from '../../../../app/data/myPresentation';
+import myPresentation from '../../../app/data/myPresentation';
 import { Container, Profile, TextWrapper } from './styles';
 
 const PRESENTATION = {
@@ -17,7 +17,7 @@ const PRESENTATION = {
 };
 const CURR_LANG = 'PTBR';
 
-function Presentation() {
+function HomePage() {
   return (
     <Container>
       <TextWrapper>
@@ -62,4 +62,4 @@ function Presentation() {
   );
 }
 
-export default Presentation;
+export default HomePage;
