@@ -13,49 +13,53 @@ const NAV_ITEMS = [
       EN: 'About',
       PTBR: 'Sobre Mim',
     },
-    section: 'about',
+    sectionLink: '/',
   },
   {
     title: {
       EN: 'Social Medias',
       PTBR: 'Redes Sociais',
     },
-    section: 'social-medias',
+    sectionLink: '/social-medias',
   },
   {
     title: {
       EN: 'skills',
       PTBR: 'Habilidades',
     },
-    section: 'skills',
+    sectionLink: '/skills',
   },
   {
     title: {
       EN: 'Projects',
       PTBR: 'Projetos',
     },
-    section: 'projects',
+    sectionLink: '/projects',
   },
   {
     title: {
       EN: 'Posts',
       PTBR: 'Artigos',
     },
-    section: 'articles',
+    sectionLink: '/articles',
   },
   {
     title: {
       EN: 'Recomendations',
       PTBR: 'Recomendações',
     },
-    section: 'recomendations',
+    sectionLink: '/recomendations',
   },
 ];
 
 const CURR_LANG = 'PTBR';
 
+function isCurrSection(section: string, pathname: string) {
+  return section === pathname;
+}
+
 function Header() {
-  const { asPath } = useRouter();
+  const { pathname } = useRouter();
 
   return (
     <Container>
@@ -64,12 +68,12 @@ function Header() {
         transition={{ duration: 0.75 }}
         style={{ marginTop: '-10rem' }}
       >
-        {NAV_ITEMS.map(({ title, section }) => (
+        {NAV_ITEMS.map(({ title, sectionLink }) => (
           <HeaderNavItem
             key={title[CURR_LANG]}
             aria-label={`ir para ${title[CURR_LANG]}`}
-            href={`/#${section}`}
-            active={`/#${section}` === asPath}
+            href={sectionLink}
+            active={isCurrSection(sectionLink, pathname)}
           >
             {title[CURR_LANG]}
           </HeaderNavItem>

@@ -37,10 +37,10 @@ export const TextWrapper = styled('div', {
   '.hand-image': {
     width: '1.6rem',
   },
-
   span: {
     marginLeft: '$2',
     fontSize: '1.2rem',
+    color: '$gray100',
 
     '@mobile': {
       fontSize: '$large',
@@ -49,7 +49,6 @@ export const TextWrapper = styled('div', {
       fontSize: '$medium',
     },
   },
-
   h1: {
     fontSize: '3.2rem',
 
@@ -60,7 +59,6 @@ export const TextWrapper = styled('div', {
       fontSize: '2.2rem',
     },
   },
-
   'h1 + span': {
     fontSize: '1.4rem',
 
@@ -74,16 +72,26 @@ export const TextWrapper = styled('div', {
 });
 
 export const Profile = styled('div', {
-  maxWidth: '400px',
-  maxHeight: '400px',
-
-  marginBottom: '$16',
-
   justifySelf: 'center',
+  div: {
+    maxWidth: '400px',
+    maxHeight: '400px',
 
-  background: '$gray100',
-  borderRadius: '$full',
+    marginBottom: '$16',
 
+    background: '$gray100',
+    borderRadius: '$full',
+  },
+  p: {
+    fontSize: '$lg',
+    textAlign: 'end',
+    color: '$gray300',
+    fontFamily: '$body',
+  },
+  'p + p': {
+    marginTop: '1rem',
+    marginBottom: '3rem',
+  },
   img: {
     maxWidth: '100%',
     borderRadius: '$full',

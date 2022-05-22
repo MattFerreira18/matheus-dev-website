@@ -42,11 +42,11 @@ export const globalStyles = globalCss({
   ul: {
     listStyleType: 'none',
   },
-  //* scrollbar styles
   '*::selection': {
-    background: '$gray100',
-    color: '$white',
+    background: '$red900',
+    color: '$gray100',
   },
+  //* scrollbar styles
   '::-webkit-scrollbar': {
     width: '8px',
   },
