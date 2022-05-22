@@ -1,0 +1,46 @@
+{
+  "name": "matheus-dev-website",
+  "email": "matheusferreira.dev@gmail.com",
+  "url": "https://matheus-ferreira.com",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "eslint --ext \"src/**/*.{ts,tsx}\"",
+    "prettier": "prettier --write \"src/**/(*.ts|*.tsx)\"",
+    "start": "next start",
+    "upgrade:packages": "yarn-upgrade-all"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
+  "dependencies": {
+    "@stitches/react": "^1.2.8",
+    "framer-motion": "^6.3.3",
+    "next": "^12.1.6",
+    "next-seo": "^5.4.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/gtag.js": "^0.0.10",
+    "@types/node": "^17.0.35",
+    "@types/react": "^18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "^12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import-helpers": "^1.2.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4",
+    "yarn-upgrade-all": "^0.7.1"
+  }
+}
