@@ -1,3 +1,17 @@
+## TODO
+- [x] change stitches config
+- [x] change CSS tokens
+- [] recreate main pages
+- [] rename some components
+- [] refactor some components
+- [] improve performance (memo, useMemo, useCallback)
+- [] improve styles for resposibility
+- [] consume the pinned repositories
+- [] improve component styles
+- [] check and improve web-vitals
+- [] finish to internationalize the website (PT-BR and EN)
+- [] create blog page
+
 ## New Architecture
 
 ```

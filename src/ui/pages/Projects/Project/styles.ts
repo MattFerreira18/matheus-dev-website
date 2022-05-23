@@ -1,4 +1,4 @@
-import styled from '../../../../styles';
+import styled from '../../../styles';
 
 export const Container = styled('div', {
   height: '12rem',
@@ -7,33 +7,34 @@ export const Container = styled('div', {
   marginY: '1rem',
   padding: '2rem',
 
-  border: '1px solid $black800',
-  borderRadius: '0.5rem',
-  background: 'none',
+  color: '$gray300',
+
+  borderRadius: '$lg',
+  border: '2px solid $gray500',
 
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
 
+  '&:hover': {
+    color: '$gray100',
+    borderColor: '$gray100',
+  },
+  '&:hover svg': {
+    color: '$gray100',
+    borderColor: '$gray100',
+  },
+
   transition: '250ms',
 
-  '&:hover': {
-    background: '$black800',
-    color: '$gray50',
+  // '@tablet': {
+  //   width: '16rem',
+  // },
 
-    '& a': {
-      color: '$gray50',
-    },
-  },
-
-  '@tablet': {
-    width: '16rem',
-  },
-
-  '@mobile': {
-    width: 'calc(100vw - 4rem)',
-    height: '14rem',
-  },
+  // '@mobile': {
+  //   width: 'calc(100vw - 4rem)',
+  //   height: '14rem',
+  // },
 });
 
 export const Title = styled('h3', {
@@ -45,7 +46,7 @@ export const Title = styled('h3', {
   letterSpacing: '0.8px',
 });
 
-export const SubTitle = styled('div', {
+export const SubTitle = styled('p', {
   letterSpacing: '0.2px',
   fontFamily: '$body',
   fontSize: '$medium',
@@ -77,10 +78,14 @@ export const TechIcons = styled('div', {
   },
 });
 
-export const GitLink = styled('div', {
+export const GitLink = styled('a', {
   fontSize: '1.5rem',
 
-  '@mobile': {
-    fontSize: '$xlarge',
+  svg: {
+    color: '$gray300',
   },
+
+  // '@mobile': {
+  //   fontSize: '$xlarge',
+  // },
 });

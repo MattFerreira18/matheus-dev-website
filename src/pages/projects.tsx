@@ -1,7 +1,9 @@
 import { GetStaticProps } from 'next';
 
+import ProjectsPage from '../ui/pages/Projects';
+
 function Projects() {
-  return <h1>Social Medias</h1>;
+  return <ProjectsPage />;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
