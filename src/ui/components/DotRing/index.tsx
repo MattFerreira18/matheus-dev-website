@@ -6,12 +6,13 @@ import { Dot, Ring } from './styles';
 
 function DotRing() {
   const { cursorModel, getPosition } = useMouse();
+  const isMobileDevice = useMobileDevice();
   const [customCursorIsActive, setCustomCursorIsActive] = useState(true);
 
   const { positionX, positionY } = getPosition();
 
   useEffect(() => {
-    setCustomCursorIsActive(!useMobileDevice());
+    setCustomCursorIsActive(!isMobileDevice);
   }, []);
 
   if (!customCursorIsActive) {

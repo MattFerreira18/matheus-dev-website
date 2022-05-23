@@ -1,22 +1,33 @@
+import { useEffect, useState } from 'react';
+
+const MAX_MOBILE_WINDOW_WIDTH = 720;
+const MOBILE_SYSTEMS = [
+  'Android',
+  'webOS',
+  'iPhone',
+  'iPad',
+  'iPod',
+  'BlackBerry',
+  'Windows Phone',
+];
+
 function useMobileDevice() {
-  const mobileSystems = [
-    'Android',
-    'webOS',
-    'iPhone',
-    'iPad',
-    'iPod',
-    'BlackBerry',
-    'Windows Phone',
-  ];
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [isMobileSystem, setIsMobileSystem] = useState(false);
 
-  const isMobileSystem = mobileSystems.some((system) =>
-    navigator.userAgent.match(`/${system}/i`),
-  );
+  useEffect(() => {
+    setIsMobileSystem(
+      MOBILE_SYSTEMS.some((system) =>
+        navigator?.userAgent.match(`/${system}/i`),
+      ),
+    );
 
-  const maxWindowMobileLength = 720;
-  const width = window.innerWidth;
+    setInterval(() => {
+      setWindowWidth(window.innerWidth);
+    }, 800);
+  }, []);
 
-  return isMobileSystem || width < maxWindowMobileLength;
+  return isMobileSystem || windowWidth < MAX_MOBILE_WINDOW_WIDTH;
 }
 
 export default useMobileDevice;

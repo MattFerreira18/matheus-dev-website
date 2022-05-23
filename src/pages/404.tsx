@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-import { LinkButton } from '../ui/components/buttons';
+import LinkButton from '../ui/components/buttons/LinkButton';
 import { Container } from '../ui/styles/pages/404';
 
 export default function NotFound() {
@@ -13,7 +13,7 @@ export default function NotFound() {
   return (
     <Container>
       <h1>404</h1>
-      <h2>Esta página não pode existir.</h2>
+      <h2>Esta página não existe.</h2>
       <LinkButton
         aria-label="retornar para a página inicial"
         title="Clique aqui para ir para a página inicial"

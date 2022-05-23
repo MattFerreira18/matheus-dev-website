@@ -1,11 +1,11 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-import { FiArrowUp } from '../../../../app/configs/icons';
 import useMouse from '../../../../app/hooks/useMouse';
+import Icon from '../../Icon';
 import { Container } from './styles';
 
-function UpButton() {
+function ToTopButton() {
   const { changeCursorModel } = useMouse();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -33,7 +33,7 @@ function UpButton() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <FiArrowUp />
+            <Icon as="FiArrowUp" />
           </motion.div>
         )}
       </AnimatePresence>
@@ -41,4 +41,4 @@ function UpButton() {
   );
 }
 
-export default UpButton;
+export default ToTopButton;

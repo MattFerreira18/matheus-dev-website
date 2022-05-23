@@ -1,7 +1,7 @@
 ## TODO
 - [x] change stitches config
 - [x] change CSS tokens
-- [] recreate main pages
+- [x] recreate main pages
 - [] rename some components
 - [] refactor some components
 - [] improve performance (memo, useMemo, useCallback)

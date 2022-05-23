@@ -1,4 +1,4 @@
-import { UpButton } from '../components/buttons';
+import ToTopButton from '../components/buttons/ToTopButton';
 import DotRing from '../components/DotRing';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -15,7 +15,7 @@ export function Layout({ children }: LayoutProps) {
       <Header />
       <Wrapper>{children}</Wrapper>
       <Footer />
-      <UpButton />
+      <ToTopButton />
     </>
   );
 }

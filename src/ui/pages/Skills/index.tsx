@@ -1,38 +1,45 @@
 import { motion } from 'framer-motion';
 
 import mySkills from '../../../app/data/mySkills';
+import Seo from '../../components/Seo';
 import HardSkill from './HardSkill';
 import { Container, Title, Wrapper } from './styles';
 
 function SkillsPage() {
   return (
-    <Container>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <Title>Habilidades</Title>
-      </motion.div>
-      <Wrapper>
+    <>
+      <Seo
+        titleSuffix="My Best Hard Skills"
+        description="This is my best hard skils"
+      />
+      <Container>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          {mySkills.hardSkills.map(({ name, description, icon }) => (
-            <HardSkill
-              key={name}
-              name={name}
-              description={description}
-              icon={icon}
-            />
-          ))}
+          <Title>Habilidades</Title>
         </motion.div>
-      </Wrapper>
-    </Container>
+        <Wrapper>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            viewport={{ once: true }}
+          >
+            {mySkills.hardSkills.map(({ name, description, icon }) => (
+              <HardSkill
+                key={name}
+                name={name}
+                description={description}
+                icon={icon}
+              />
+            ))}
+          </motion.div>
+        </Wrapper>
+      </Container>
+    </>
   );
 }
 
