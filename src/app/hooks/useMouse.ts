@@ -21,7 +21,7 @@ function useMouse() {
 
   const getPosition = useCallback(() => {
     return { positionX: position.x, positionY: position.y };
-  }, []);
+  }, [position.x, position.y]);
 
   useEffect(() => {
     document.addEventListener('mousemove', handleMouseMove);
