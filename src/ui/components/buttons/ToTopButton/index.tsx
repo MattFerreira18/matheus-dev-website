@@ -1,12 +1,12 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-import useMouse from '../../../../app/hooks/useMouse';
+import useCursor from '../../../../app/hooks/useCursor';
 import Icon from '../../Icon';
 import { Container } from './styles';
 
 function ToTopButton() {
-  const { changeCursorModel } = useMouse();
+  const { onChangeCursorModel } = useCursor();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -21,8 +21,8 @@ function ToTopButton() {
 
   return (
     <Container
-      onMouseEnter={() => changeCursorModel('hovered')}
-      onMouseLeave={() => changeCursorModel()}
+      onMouseEnter={() => onChangeCursorModel('hovered')}
+      onMouseLeave={() => onChangeCursorModel()}
       onClick={() => handleMoveStartPage()}
       aria-label="ir para o início"
     >

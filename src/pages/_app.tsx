@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 import seo from '../app/constants/seo';
-import MouseProvider from '../app/contexts/MouseContext';
+import CursorProvider from '../app/contexts/CursorContext';
 import gtag from '../app/lib/gtag';
 import { Layout } from '../ui/Layout';
 import { globalStyles } from '../ui/styles/global';
@@ -29,12 +29,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events]);
 
   return (
-    <MouseProvider>
+    <CursorProvider>
       <DefaultSeo {...seo} />
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </MouseProvider>
+    </CursorProvider>
   );
 }
 

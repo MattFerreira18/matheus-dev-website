@@ -1,4 +1,4 @@
-import useMouse from '../../app/hooks/useMouse';
+import useCursor from '../../app/hooks/useCursor';
 
 type SocialNetworkLinkProps = {
   link: string;
@@ -6,15 +6,15 @@ type SocialNetworkLinkProps = {
 };
 
 function SocialNetworkLink({ icon, link }: SocialNetworkLinkProps) {
-  const { changeCursorModel } = useMouse();
+  const { onChangeCursorModel } = useCursor();
 
   return (
     <a
       href={link}
       rel="noreferrer"
       target="_blank"
-      onMouseEnter={() => changeCursorModel('hovered')}
-      onMouseLeave={() => changeCursorModel()}
+      onMouseEnter={() => onChangeCursorModel('hovered')}
+      onMouseLeave={() => onChangeCursorModel()}
     >
       {icon}
     </a>

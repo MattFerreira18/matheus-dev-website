@@ -4,12 +4,12 @@ import { useState } from 'react';
 
 import { CURR_LANG } from '../../../app/constants/language';
 import PRESENTATION from '../../../app/constants/presentation';
-import useMouse from '../../../app/hooks/useMouse';
+import useCursor from '../../../app/hooks/useCursor';
 import Seo from '../../components/Seo';
 import { Container, Profile, TextWrapper } from './styles';
 
 function HomePage() {
-  const { changeCursorModel } = useMouse();
+  const { onChangeCursorModel } = useCursor();
   const [canShowAboutMe, setCanShowAboutMe] = useState(false);
 
   function onNameClick() {
@@ -43,8 +43,8 @@ function HomePage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             onClick={onNameClick}
-            onMouseEnter={() => changeCursorModel('hovered')}
-            onMouseLeave={() => changeCursorModel()}
+            onMouseEnter={() => onChangeCursorModel('hovered')}
+            onMouseLeave={() => onChangeCursorModel()}
           >
             Matheus Ferreira
           </motion.h1>

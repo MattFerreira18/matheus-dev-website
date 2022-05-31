@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes } from 'react';
 
-import useMouse from '../../../../app/hooks/useMouse';
+import useCursor from '../../../../app/hooks/useCursor';
 import { Container } from './styles';
 
 type LinkButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -8,12 +8,12 @@ type LinkButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 function LinkButton({ title, ...props }: LinkButtonProps) {
-  const { changeCursorModel } = useMouse();
+  const { onChangeCursorModel } = useCursor();
 
   return (
     <Container
-      onMouseEnter={() => changeCursorModel('hovered')}
-      onMouseLeave={() => changeCursorModel()}
+      onMouseEnter={() => onChangeCursorModel('hovered')}
+      onMouseLeave={() => onChangeCursorModel()}
       {...props}
     >
       {title}

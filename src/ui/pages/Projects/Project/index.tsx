@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-import useMouse from '../../../../app/hooks/useMouse';
+import useCursor from '../../../../app/hooks/useCursor';
 import Icon from '../../../components/Icon';
 import {
   Container,
@@ -31,7 +31,7 @@ const availableTechIcons = {
 };
 
 function Project({ name, overview, repository, technologies }: ProjectProps) {
-  const { changeCursorModel } = useMouse();
+  const { onChangeCursorModel } = useCursor();
   const [isHovered, setIsHovered] = useState(false);
   const [techIcons, setTechIcons] = useState<React.ReactElement[]>([]);
 
@@ -67,8 +67,8 @@ function Project({ name, overview, repository, technologies }: ProjectProps) {
               href={repository}
               target="_blank"
               rel="noreferrer"
-              onMouseEnter={() => changeCursorModel('hovered')}
-              onMouseLeave={() => changeCursorModel()}
+              onMouseEnter={() => onChangeCursorModel('hovered')}
+              onMouseLeave={() => onChangeCursorModel()}
             >
               <Icon as="SiGithub" />
             </GitLink>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import useMouse from '../../../../app/hooks/useMouse';
+import useCursor from '../../../../app/hooks/useCursor';
 import { Container } from './styles';
 
 type SocialLinkProps = {
@@ -11,16 +11,16 @@ type SocialLinkProps = {
 };
 
 function SocialLink({ icon, link, name, nickname }: SocialLinkProps) {
-  const { changeCursorModel } = useMouse();
+  const { onChangeCursorModel } = useCursor();
   const [isHovering, setIsHovering] = useState(false);
 
   function onMouseEnter() {
-    changeCursorModel('hovered');
+    onChangeCursorModel('hovered');
     setIsHovering(true);
   }
 
   function onMouseLeave() {
-    changeCursorModel();
+    onChangeCursorModel();
     setIsHovering(false);
   }
 
