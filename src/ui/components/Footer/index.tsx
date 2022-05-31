@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import socialNetworks from '../../../app/data/socialNetworks';
+import SOCIAL_MEDIAS from '../../../app/constants/socialMedias';
 import Icon from '../Icon';
 import SocialNetworkLink from '../SocialNetworkLink';
 import { Container, SocialNetworks, Disclaimer } from './styles';
@@ -22,7 +22,7 @@ function Footer() {
           </span>
         </Disclaimer>
         <SocialNetworks>
-          {socialNetworks.map((socialNetwork) => (
+          {SOCIAL_MEDIAS.map((socialNetwork) => (
             <SocialNetworkLink
               key={socialNetwork.link}
               link={socialNetwork.link}

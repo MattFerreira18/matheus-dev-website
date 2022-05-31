@@ -3,9 +3,9 @@ import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
+import seo from '../app/constants/seo';
 import MouseProvider from '../app/contexts/MouseContext';
-import seo from '../app/data/seo';
-import { gtag } from '../app/lib/gtag';
+import gtag from '../app/lib/gtag';
 import { Layout } from '../ui/Layout';
 import { globalStyles } from '../ui/styles/global';
 

@@ -1,4 +1,4 @@
-import { createContext, useMemo, useState } from 'react';
+import { createContext, useCallback, useMemo, useState } from 'react';
 
 type MouseContextProps = {
   cursorModel: string;
@@ -14,9 +14,12 @@ const MouseContext = createContext<MouseContextProps>({} as MouseContextProps);
 function MouseProvider({ children }: MouseProviderProps) {
   const [cursorModel, setCursorModel] = useState('');
 
-  function changeCursorModel(newCursorModel?: 'hovered' | 'blocked') {
-    setCursorModel(newCursorModel);
-  }
+  const changeCursorModel = useCallback(
+    (newCursorModel?: 'hovered' | 'blocked') => {
+      setCursorModel(newCursorModel);
+    },
+    [],
+  );
 
   const contextMemoized = useMemo(
     () => ({

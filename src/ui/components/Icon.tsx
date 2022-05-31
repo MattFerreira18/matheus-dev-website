@@ -1,6 +1,6 @@
 import { createElement } from 'react';
 
-import * as icons from '../../app/configs/icons';
+import * as icons from '../../app/constants/icons';
 
 type IconProps = {
   as: keyof typeof icons;

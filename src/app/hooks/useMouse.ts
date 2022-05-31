@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useCallback, useContext, useEffect, useState } from 'react';
 
 import { MouseContext } from '../contexts/MouseContext';
 
@@ -14,16 +14,16 @@ function useMouse() {
     y: null,
   });
 
-  function getPosition() {
+  const handleMouseMove = useCallback((event: MouseEvent) => {
+    const { clientX, clientY } = event;
+    setPosition({ x: clientX, y: clientY });
+  }, []);
+
+  const getPosition = useCallback(() => {
     return { positionX: position.x, positionY: position.y };
-  }
+  }, []);
 
   useEffect(() => {
-    function handleMouseMove(event: MouseEvent) {
-      const { clientX, clientY } = event;
-      setPosition({ x: clientX, y: clientY });
-    }
-
     document.addEventListener('mousemove', handleMouseMove);
 
     return () => {

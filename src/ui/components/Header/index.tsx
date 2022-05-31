@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
+import { CURR_LANG } from '../../../app/constants/language';
 import HeaderNavItem from './NavItem';
 import { Container } from './styles';
 
@@ -48,8 +49,6 @@ const NAV_ITEMS = [
     sectionLink: '/recomendations',
   },
 ];
-
-const CURR_LANG = 'PTBR';
 
 function isCurrSection(section: string, pathname: string) {
   return section === pathname;

@@ -1,6 +1,6 @@
 import Icon from '../../ui/components/Icon';
 
-const socialNetworks = [
+const SOCIAL_MEDIAS = [
   {
     name: 'LinkedIn',
     nickname: '@matt-ferreira18',
@@ -27,4 +27,4 @@ const socialNetworks = [
   },
 ];
 
-export default socialNetworks;
+export default SOCIAL_MEDIAS;

@@ -1,3 +1,5 @@
+//! DEPRECATED
+
 const featuredArticles = [
   {
     id: '1',

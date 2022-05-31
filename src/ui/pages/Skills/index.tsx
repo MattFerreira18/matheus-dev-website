@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import mySkills from '../../../app/data/mySkills';
+import SKILLS from '../../../app/constants/skills';
 import Seo from '../../components/Seo';
 import HardSkill from './HardSkill';
 import { Container, Title, Wrapper } from './styles';
@@ -28,7 +28,7 @@ function SkillsPage() {
             transition={{ duration: 2 }}
             viewport={{ once: true }}
           >
-            {mySkills.hardSkills.map(({ name, description, icon }) => (
+            {SKILLS.map(({ name, description, icon }) => (
               <HardSkill
                 key={name}
                 name={name}

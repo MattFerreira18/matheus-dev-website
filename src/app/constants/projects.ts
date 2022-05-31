@@ -1,4 +1,4 @@
-const myProjects = [
+const PROJECTS = [
   {
     name: 'DT.Money',
     overview: 'easily control your finances',
@@ -40,4 +40,4 @@ const myProjects = [
   },
 ];
 
-export default myProjects;
+export default PROJECTS;

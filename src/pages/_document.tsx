@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import NextDocument, { Head, Html, Main, NextScript } from 'next/document';
 
-import { gtag } from '../app/lib/gtag';
+import gtag from '../app/lib/gtag';
 import { getCssText } from '../ui/styles';
 
 class myDocument extends NextDocument {

@@ -1,7 +1,6 @@
 import { Children, useState, cloneElement } from 'react';
 
-import ModalSection from '../ModalSection';
-import { ArrowDown, Container, Content, Wrapper } from './styles';
+import { ArrowDown, Container, Content, Wrapper, Section } from './styles';
 
 type PopoverProps = {
   title: string;
@@ -24,7 +23,10 @@ function Popover({ title, description, children }: PopoverProps) {
     <Container>
       <Wrapper className={showPopup ? 'active' : ''}>
         <Content>
-          <ModalSection title={title}>{description}</ModalSection>
+          <Section>
+            <div>{title}</div>
+            {description}
+          </Section>
         </Content>
         <ArrowDown />
       </Wrapper>

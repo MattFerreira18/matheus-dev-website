@@ -1,4 +1,4 @@
-import { Popover } from '../../../components/modal';
+import Popover from '../../../components/Popover';
 import { Container } from './styles';
 
 type HardSkillProps = {

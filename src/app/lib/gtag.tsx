@@ -1,6 +1,6 @@
 import Script from 'next/script';
 
-import ANALYTICS_CONFIG from '../configs/analytics';
+import ANALYTICS_CONFIG from '../constants/analytics';
 
 function GtagScript() {
   return (
@@ -34,7 +34,9 @@ function pageview(url: string) {
   }
 }
 
-export const gtag = {
+const gtag = {
   Scripts: GtagScript,
   pageview,
 };
+
+export default gtag;

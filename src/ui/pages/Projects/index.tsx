@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import myProjects from '../../../app/data/myProjects';
+import PROJECTS from '../../../app/constants/projects';
 import Seo from '../../components/Seo';
 import Project from './Project';
 import { Container, Title, Wrapper } from './styles';
@@ -28,8 +28,14 @@ function ProjectsPage() {
             transition={{ duration: 2 }}
             viewport={{ once: true }}
           >
-            {myProjects.map((project) => (
-              <Project key={project.name} {...project} />
+            {PROJECTS.map(({ name, overview, repository, technologies }) => (
+              <Project
+                key={name}
+                name={name}
+                overview={overview}
+                repository={repository}
+                technologies={technologies}
+              />
             ))}
           </motion.div>
         </Wrapper>

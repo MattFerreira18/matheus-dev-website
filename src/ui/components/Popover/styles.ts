@@ -1,4 +1,4 @@
-import styled, { keyframes } from '../../../styles';
+import styled, { keyframes } from '../../styles';
 
 const translatePopover = keyframes({
   '0%': { transform: 'translateY(100%)' },
@@ -76,5 +76,32 @@ export const Content = styled('div', {
     fontSize: '$medium',
 
     transform: 'scale(1.0)',
+  },
+});
+
+export const Section = styled('div', {
+  '& > div': {
+    marginBottom: '0.6rem',
+
+    fontWeight: 'bold',
+    fontSize: '$medium',
+  },
+
+  '@mobile': {
+    width: '100%',
+
+    display: 'flex',
+    flexDirection: 'column',
+
+    '& > div': {
+      marginY: '1rem',
+
+      fontWeight: 'bold',
+      fontSize: '$xlarge',
+    },
+
+    button: {
+      width: 'calc(100vw - 4rem)',
+    },
   },
 });

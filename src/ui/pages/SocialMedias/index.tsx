@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import socialNetworks from '../../../app/data/socialNetworks';
+import SOCIAL_MEDIAS from '../../../app/constants/socialMedias';
 import SocialLink from '../../components/links/SocialLink';
 import Seo from '../../components/Seo';
 import { Container, Title, Wrapper } from './styles';
@@ -28,7 +28,7 @@ function SocialMediasPage() {
             transition={{ duration: 2 }}
             viewport={{ once: true }}
           >
-            {socialNetworks.map(({ icon, link, name, nickname }) => (
+            {SOCIAL_MEDIAS.map(({ icon, link, name, nickname }) => (
               <SocialLink
                 key={name}
                 aria-label={name}

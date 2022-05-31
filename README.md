@@ -8,6 +8,7 @@
 - [] improve styles for resposibility
 - [] consume the pinned repositories
 - [] improve component styles
+- [] improve SEO
 - [] check and improve web-vitals
 - [] finish to internationalize the website (PT-BR and EN)
 - [] create blog page
