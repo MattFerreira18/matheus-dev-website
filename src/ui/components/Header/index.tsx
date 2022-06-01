@@ -22,7 +22,7 @@ const NAV_ITEMS = [
   },
   {
     title: {
-      EN: 'skills',
+      EN: 'Skills',
       PTBR: 'Habilidades',
     },
     sectionLink: '/skills',

@@ -55,6 +55,8 @@ export const SubTitle = styled('p', {
 });
 
 export const IconsWrapper = styled('div', {
+  height: '1.5rem',
+
   display: 'flex',
   justifyContent: 'space-between',
   fontSize: '$large',
