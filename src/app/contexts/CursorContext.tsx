@@ -2,7 +2,9 @@ import { createContext, useCallback, useMemo, useState } from 'react';
 
 type CursorContextProps = {
   cursorModel: string;
-  onChangeCursorModel: (newCursorModel?: 'hovered' | 'blocked') => void;
+  onChangeCursorModel: (
+    newCursorModel?: 'default' | 'hovered' | 'blocked',
+  ) => void;
 };
 
 type CursorProviderProps = {
@@ -17,8 +19,8 @@ function CursorProvider({ children }: CursorProviderProps) {
   const [cursorModel, setCursorModel] = useState('');
 
   const onChangeCursorModel = useCallback(
-    (newCursorModel?: 'hovered' | 'blocked') => {
-      setCursorModel(newCursorModel);
+    (newCursorModel?: 'default' | 'hovered' | 'blocked') => {
+      setCursorModel(newCursorModel === 'default' ? '' : newCursorModel);
     },
     [],
   );

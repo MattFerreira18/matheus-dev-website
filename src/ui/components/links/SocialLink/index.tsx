@@ -20,7 +20,7 @@ function SocialLink({ icon, link, name, nickname }: SocialLinkProps) {
   }
 
   function onMouseLeave() {
-    onChangeCursorModel();
+    onChangeCursorModel('default');
     setIsHovering(false);
   }
 

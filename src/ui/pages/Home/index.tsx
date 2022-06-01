@@ -44,7 +44,7 @@ function HomePage() {
             transition={{ duration: 0.5 }}
             onClick={onNameClick}
             onMouseEnter={() => onChangeCursorModel('hovered')}
-            onMouseLeave={() => onChangeCursorModel()}
+            onMouseLeave={() => onChangeCursorModel('default')}
           >
             Matheus Ferreira
           </motion.h1>

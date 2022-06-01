@@ -13,7 +13,7 @@ function LinkButton({ title, ...props }: LinkButtonProps) {
   return (
     <Container
       onMouseEnter={() => onChangeCursorModel('hovered')}
-      onMouseLeave={() => onChangeCursorModel()}
+      onMouseLeave={() => onChangeCursorModel('default')}
       {...props}
     >
       {title}

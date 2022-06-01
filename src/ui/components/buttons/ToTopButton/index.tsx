@@ -22,7 +22,7 @@ function ToTopButton() {
   return (
     <Container
       onMouseEnter={() => onChangeCursorModel('hovered')}
-      onMouseLeave={() => onChangeCursorModel()}
+      onMouseLeave={() => onChangeCursorModel('default')}
       onClick={() => handleMoveStartPage()}
       aria-label="ir para o início"
     >

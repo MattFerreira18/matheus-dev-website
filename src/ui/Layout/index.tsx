@@ -1,5 +1,4 @@
 import ToTopButton from '../components/buttons/ToTopButton';
-import DotRing from '../components/DotRing';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { Wrapper } from './styles';
@@ -11,7 +10,7 @@ type LayoutProps = {
 export function Layout({ children }: LayoutProps) {
   return (
     <>
-      <DotRing />
+      {/* <DotRing /> */}
       <Header />
       <Wrapper>{children}</Wrapper>
       <Footer />

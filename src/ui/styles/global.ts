@@ -4,7 +4,7 @@ export const globalStyles = globalCss({
   //* CSS reset
   '*': {
     boxSizing: 'border-box',
-    cursor: 'none',
+    // cursor: 'none',
     fontFamily: '$body',
     margin: 0,
     padding: 0,

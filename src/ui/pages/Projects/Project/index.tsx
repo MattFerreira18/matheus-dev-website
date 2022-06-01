@@ -68,7 +68,7 @@ function Project({ name, overview, repository, technologies }: ProjectProps) {
               target="_blank"
               rel="noreferrer"
               onMouseEnter={() => onChangeCursorModel('hovered')}
-              onMouseLeave={() => onChangeCursorModel()}
+              onMouseLeave={() => onChangeCursorModel('default')}
             >
               <Icon as="SiGithub" />
             </GitLink>

@@ -14,7 +14,7 @@ function SocialNetworkLink({ icon, link }: SocialNetworkLinkProps) {
       rel="noreferrer"
       target="_blank"
       onMouseEnter={() => onChangeCursorModel('hovered')}
-      onMouseLeave={() => onChangeCursorModel()}
+      onMouseLeave={() => onChangeCursorModel('default')}
     >
       {icon}
     </a>

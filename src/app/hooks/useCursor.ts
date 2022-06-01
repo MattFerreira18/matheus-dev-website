@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import { CursorContext } from '../contexts/CursorContext';
 
@@ -8,27 +8,26 @@ interface CursorPosition {
 }
 
 function useCursor() {
-  const [position, setPosition] = useState<CursorPosition>({
-    x: 0,
-    y: 0,
-  });
   const { cursorModel, onChangeCursorModel } = useContext(CursorContext);
+  const [position, setPosition] = useState<CursorPosition>({
+    x: null,
+    y: null,
+  });
 
-  const handleCursorMove = useCallback((event: MouseEvent) => {
-    const { clientX, clientY } = event;
-    setPosition({ x: clientX, y: clientY });
-  }, []);
-
-  const getCursorPosition = useCallback(
-    () => ({ positionX: position.x, positionY: position.y }),
-    [position.x, position.y],
-  );
+  function getCursorPosition() {
+    return { positionX: position.x, positionY: position.y };
+  }
 
   useEffect(() => {
-    document.addEventListener('mousemove', handleCursorMove);
+    function handleMouseMove(event: MouseEvent) {
+      const { clientX, clientY } = event;
+      setPosition({ x: clientX, y: clientY });
+    }
+
+    document.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      document.removeEventListener('mousemove', handleCursorMove);
+      document.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
