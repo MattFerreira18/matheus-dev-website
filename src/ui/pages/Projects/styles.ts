@@ -25,8 +25,8 @@ export const Wrapper = styled('div', {
   '& > div': {
     width: '1200px',
 
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridTemplateRows: 'auto',
   },
 });

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
+import { CURR_LANG } from '../../../../app/constants/language';
 import useCursor from '../../../../app/hooks/useCursor';
 import Icon from '../../../components/Icon';
 import {
@@ -18,6 +19,17 @@ type ProjectProps = {
   repository: string;
   technologies: string[];
 };
+
+function splitLangOverviews(overview: string) {
+  if (!overview || overview.length === 0) {
+    return '';
+  }
+
+  const PTBR = /PTBR: (.*?)EN:/gi.exec(overview)[1];
+  const EN = /(?<=EN: ).*/gi.exec(overview)[0];
+
+  return { PTBR, EN };
+}
 
 const availableTechIcons = {
   Typescript: <Icon as="SiTypescript" key="typescript" />,
@@ -47,11 +59,13 @@ function Project({ name, overview, repository, technologies }: ProjectProps) {
     setIsHovered((prevState) => !prevState);
   }
 
+  splitLangOverviews(overview);
+
   return (
     <Container onMouseEnter={onMouseHover} onMouseLeave={onMouseHover}>
       <div>
         <Title>{name}</Title>
-        <SubTitle>{overview}</SubTitle>
+        <SubTitle>{splitLangOverviews(overview)[CURR_LANG]}</SubTitle>
       </div>
       <IconsWrapper>
         <TechIcons>{techIcons.map((icon) => icon)}</TechIcons>

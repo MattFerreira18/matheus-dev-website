@@ -1,11 +1,20 @@
 import { motion } from 'framer-motion';
 
-import PROJECTS from '../../../app/constants/projects';
 import Seo from '../../components/Seo';
 import Project from './Project';
 import { Container, Title, Wrapper } from './styles';
 
-function ProjectsPage() {
+interface ProjectsPage {
+  pinnedRepos: {
+    id: number;
+    name: string;
+    html_url: string;
+    description: string;
+    topics: string[];
+  }[];
+}
+
+function ProjectsPage({ pinnedRepos }: ProjectsPage) {
   return (
     <>
       <Seo
@@ -28,13 +37,13 @@ function ProjectsPage() {
             transition={{ duration: 2 }}
             viewport={{ once: true }}
           >
-            {PROJECTS.map(({ name, overview, repository, technologies }) => (
+            {pinnedRepos.map(({ id, name, description, html_url, topics }) => (
               <Project
-                key={name}
+                key={id}
                 name={name}
-                overview={overview}
-                repository={repository}
-                technologies={technologies}
+                overview={description}
+                repository={html_url}
+                technologies={topics}
               />
             ))}
           </motion.div>
