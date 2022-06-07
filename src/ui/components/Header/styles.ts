@@ -15,4 +15,8 @@ export const Container = styled('header', {
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  '@mobile': {
+    display: 'none',
+  },
 });

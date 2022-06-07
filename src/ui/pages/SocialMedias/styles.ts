@@ -20,16 +20,12 @@ export const Wrapper = styled('div', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+
+    '@mobile': {
+      width: '100%',
+      flexDirection: 'column',
+    },
   },
-
-  // '@tablet': {
-  //   paddingLeft: '1.2rem',
-  // },
-
-  // '@mobile': {
-  //   paddingX: '2rem',
-  //   flexDirection: 'column',
-  // },
 });
 
 export const Title = styled('h2', {

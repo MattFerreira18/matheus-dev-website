@@ -15,15 +15,19 @@ export const Container = styled('footer', {
   left: 0,
   bottom: 0,
 
+  '@mobile': {
+    height: 'auto',
+  },
+
   '& > div': {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
 
     '@mobile': {
+      paddingY: '$4',
+      paddingX: '$12',
       flexDirection: 'column-reverse',
-      height: 'auto',
-      paddingY: '2rem',
     },
   },
 });
@@ -41,6 +45,10 @@ export const Disclaimer = styled('div', {
 
   svg: {
     marginX: '0.4rem',
+  },
+
+  '@mobile': {
+    display: 'none',
   },
 });
 
@@ -67,7 +75,8 @@ export const SocialNetworks = styled('div', {
   },
 
   '@mobile': {
-    fontSize: '$xlarge',
-    marginBottom: '1rem',
+    justifyContent: 'space-between',
+    fontSize: 'calc($md * 2)',
+    width: '100%',
   },
 });
