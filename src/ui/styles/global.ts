@@ -1,60 +1,38 @@
-import { globalCss } from '../../app/configs/stitches';
+/* eslint-disable import/prefer-default-export */
+import { globalCss } from "./styled";
 
-export const globalStyles = globalCss({
+export const createGlobalStyles = globalCss({
   '*': {
     margin: 0,
     padding: 0,
-    boxSizing: 'border-box',
-    cursor: 'none',
-    'scroll-behavior': 'smooth',
+    border: 0,
+    fontFamily: '$body, Arial, Helvetica, Courier, sans-serif',
+    transition: '250ms',
   },
-  '*::selection': {
-    background: '$gray100',
-    color: '$white',
-  },
-
   html: {
     '@media (max-width: 1080px)': {
       fontSize: '93.75%',
     },
-    '@media (max-width: 720px)': {
+    '@media (max-width: 480px)': {
       fontSize: '87.5%',
     },
-    '@media (max-width: 480px)': {
-      fontSize: '81.25%',
-    },
   },
-
   body: {
     color: '$gray100',
     fontFamily: '$body',
-    background: '$black900',
+    background: '$gray600',
   },
-  button: {
-    border: 'none',
-    transition: '250ms',
+  'h1, h2, h3, h4': {
+    fontFamily: '$title',
   },
   a: {
     textDecoration: 'none',
+    color: '$gray100',
   },
-  input: {
-    outline: 'none',
+  button: {
+    cursor: 'pointer',
   },
-
-  '::-webkit-scrollbar': {
-    width: '8px',
-  },
-
-  '::-webkit-scrollbar-track': {
-    background: '$black800',
-  },
-
-  '::-webkit-scrollbar-thumb': {
-    background: '$gray100',
-    borderRadius: '4px',
-  },
-
-  '::-webkit-scrollbar-thumb:hover': {
-    background: '$gray50',
+  p: {
+    lineHeight: 1.8,
   },
 });

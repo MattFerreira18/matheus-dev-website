@@ -1,35 +1,21 @@
-import { DefaultSeo } from 'next-seo';
-import { AppProps } from 'next/app';
-import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
+import type { NextPage } from 'next';
+import type { AppProps } from 'next/app';
 
-import MouseProvider from '../app/contexts/MouseContext';
-import seo from '../app/data/seo';
-import { gtag } from '../app/lib/gtag';
-import { Layout } from '../ui/Layout';
-import { globalStyles } from '../ui/styles/global';
+import Layout from '../ui/components/Layout';
+import Topbar from '../ui/components/Topbar';
+import { createGlobalStyles } from '../ui/styles';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-
-  globalStyles();
-
-  useEffect(() => {
-    router.events.on('routeChangeComplete', (url) => gtag.pageview(url));
-
-    return () => {
-      router.events.off('routeChangeComplete', (url) => gtag.pageview(url));
-    };
-  }, [router.events]);
+const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
+  createGlobalStyles();
 
   return (
-    <MouseProvider>
-      <DefaultSeo {...seo} />
+    <>
+      <Topbar />
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </MouseProvider>
+    </>
   );
-}
+};
 
 export default MyApp;
